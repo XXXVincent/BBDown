@@ -172,7 +172,7 @@ namespace BBDown
                     var arguments = $"-loglevel warning -y -i \"{file}\" -map 0 -c copy -f mpegts -bsf:v h264_mp4toannexb \"{tmpFile}\"";
                     LogDebug("ffmpeg命令：{0}", arguments);
                     RunExe("ffmpeg", arguments);
-                    File.Delete(file);
+//                    File.Delete(file);
                 }
                 var f = GetFiles(Path.GetDirectoryName(files[0]), ".ts");
                 CombineMultipleFilesIntoSingleFile(f, outPath);
